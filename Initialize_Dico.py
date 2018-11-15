@@ -16,9 +16,3 @@ def Initialize_Dico():
         dico[ mot[i] ] = lemme[i]
 
     return dico
-
-dico = Initialize_Dico()
-
-print(dico.get("1_ortho"))
-print(dico.get("a"))
-print(dico.get("abaissa"))
