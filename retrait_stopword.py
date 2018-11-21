@@ -31,13 +31,13 @@ def retrait_stopword(text, stopword):
         stop_word = word_tokenize(stop_word, language ='french')
     #Si la liste choisie est entre 1 et 4 c'est correct donc on retire, sinon afficher erreur
     if 0 < stopword < 5:
-        for nText in range(len(text)):
+        for nText in range(0,len(text)):
             text_sans_sw=[]
             text_token = word_tokenize(text[nText], language ='french')
             for word in text_token:
                 if word not in stop_word:
                     text_sans_sw.append(word)
-        final.append(sep.join(text_sans_sw))
+            final.append(sep.join(text_sans_sw))
     else :
         print("Veuillez saisir une liste de stopword valide (1, 2, 3 ou 4 )")
     return final
