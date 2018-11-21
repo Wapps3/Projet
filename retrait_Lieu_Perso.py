@@ -17,9 +17,8 @@ import re
 #triés selon leurs parties
 
 def retrait_Lieu_Perso(texte):
-    sw=import_stopword()
-    texte=retrait_stopword(sw[0],texte)
-    texte=retrait_stopword(sw[1],texte)
+    texte=retrait_stopword(texte,1)
+    texte=retrait_stopword(texte,2)
     dicoPerso = dict()
     taille = len(texte)
     for i in range (0,taille):
@@ -34,5 +33,7 @@ def retrait_Lieu_Perso(texte):
             elif(re.match('[A-Z]+|É',token_bel_ami[j])):
                     perso.append(token_bel_ami[j])
             j=j+1
-        dicoPerso[i]=perso
+        if(len(perso)>0):
+            dicoPerso[i]=perso
+        
     return dicoPerso
