@@ -33,7 +33,7 @@ def frequence_mot_dict(text): #cree la dictionnaire de mots et son fréquence
         d[mot]=d.get(mot,0)+1
         
     return d
-#print(frequency_mot_dict(bel))
+#print(frequence_mot_dict(bel))
 
     
 def frequence_Mot(text,mot):
