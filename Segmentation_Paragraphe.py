@@ -1,12 +1,6 @@
 
 
 import re
-#--------------------------------Import du TXT
-t = open('C:/Users/bmchl/Desktop/Cours/bel_ami.txt', 'r')
-bel_ami=t.read()
-
-bel=list()              
-bel.append(bel_ami)#met le texte dans une liste de string
 
 def segmentation_paragraphe(text):  #text est une liste de string
     taille=len(text)            #taille du texte coupe en liste
@@ -26,13 +20,4 @@ def segmentation_paragraphe(text):  #text est une liste de string
     
     listeParagraphe=newTexte.split("@") #Separe le texte au niveau des @ mis precedemment
     return listeParagraphe
-    
-def afficher_paragraphe(listePara): #permet d'afficher la liste des paragraphes
-    taille = len(listePara)
-    print (taille)
-    for i in range(0,taille):
-        print("paragraphe :" )
-        print (i)
-        print (listePara[i])
-        print (" ")
 
