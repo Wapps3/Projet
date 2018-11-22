@@ -25,14 +25,3 @@ def find_Words(text, mot):#prend une liste de string et un mot
         dico[k]=liste #on ajoute la liste avec tous les indices pour la partie dans le dico
     return dico #retourne une clef du dico qui est le numero de la partie (paragraphe, page, proportion,...)
                 # associe a une liste d'indice 
-
-
-def find_Part(text,mot): #prend une liste de String et un mot
-    dico=find_Words(text,mot)   #on effectue la fonction precedente
-    taille = len(dico)  #taille du dictionnaire(donc nombre de partie)
-    retour=list() #on initialise une liste qui portera le numero de chaque partie contenant le mot
-    for i in range(0,taille):
-        if(dico[i]!=[]):    #si la partie du dico ne contient rien
-            retour.append(i)#on l'ajoute car elle ne contient pas le mot
-    return retour
-
