@@ -7,7 +7,7 @@ import numpy #PACKAGE OBLIGATOIRE pour la fonction segentation porportion
 # A besoin en entrée du text et du nombre de parties voulu (n). Retourne une liste de taille n composées des phrases du texte
 def Segmentation_Proportion(liste, n):
   
-for i in range(len(liste))
+for i in range(len(liste)):
     text = liste[i]
     segmentation=list() #liste finale composée de n éléments comportants chacun plusieurs phrases
     sep=' ' # séparateur en chaque phrase (correspond à l'espace qu'il y a entre la fin d'une pharse et le début d'une autre)
@@ -33,4 +33,4 @@ for i in range(len(liste))
             a=a+liste[y]
             segmentation.append(sep.join(t[p:a])) #sep.join sert a concatener toutes les phrases en 1 seul élément avec comme séparateur : sep
             p=a
-    return segmentation # on retourne notre liste à n éléments composées de liste[0] phrases en premier éléments puis liste[1] phrases en deuxième éléments jusqu'à n
+return segmentation # on retourne notre liste à n éléments composées de liste[0] phrases en premier éléments puis liste[1] phrases en deuxième éléments jusqu'à n
