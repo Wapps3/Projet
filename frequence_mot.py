@@ -12,15 +12,6 @@ import re
 import string
 #from collections import 
 
-
-t = open('E:/EDUCATION/MASTER1/PROJECT-MANAGEMENT/Code/bel_Ami.txt', 'r',encoding='utf8')
-bel_ami=t.read()
-bel=list()    
-bel.append(bel_ami)
-
-
-    
-     
 def frequence_mot_dict(text): #cree la dictionnaire de mots et son fréquence
     text =text[0]
     text=text.replace("’",'  ') # replacer "’ " par l'espace
@@ -33,8 +24,6 @@ def frequence_mot_dict(text): #cree la dictionnaire de mots et son fréquence
         d[mot]=d.get(mot,0)+1
         
     return d
-#print(frequence_mot_dict(bel))
-
     
 def frequence_Mot(text,mot):
     a=[]
@@ -47,13 +36,7 @@ def frequence_Mot(text,mot):
             if cle == mot:
                 a.append(("la fréquence de mot "+ "'" +cle + "'" +":" + str(valeur)+ " fois"))
         return (a)
-#-------------------------------------------------------------
-mot = "électronique"
-print( frequence_Mot(bel,mot))  
-#["la fréquence de mot 'électronique':2 fois"]    
-            
-           
-    
+
             
 
 
