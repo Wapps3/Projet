@@ -22,6 +22,7 @@ def find_Words(text, mot):#prend une liste de string et un mot
                     #on ajoute l'indice de la derniere lettre du mot
                 i=i+1
                 j=j+1
-        dico[k]=liste #on ajoute la liste avec tous les indices pour la partie dans le dico
+        if len(liste)>0 :
+            dico[k]=liste #on ajoute la liste avec tous les indices pour la partie dans le dico
     return dico #retourne une clef du dico qui est le numero de la partie (paragraphe, page, proportion,...)
-                # associe a une liste d'indice 
+                # associe a une liste d'indice (debut et fin)
