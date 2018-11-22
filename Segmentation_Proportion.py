@@ -5,7 +5,10 @@ import numpy #PACKAGE OBLIGATOIRE pour la fonction segentation porportion
 #Divise le texte en n parties composées de phrases (PACKAGE numpy et sent_tokenize OBLIGATOIRE) 
 #Package numpy sert a additionner les termes d'une liste avec une autre (même taille)
 # A besoin en entrée du text et du nombre de parties voulu (n). Retourne une liste de taille n composées des phrases du texte
-def Segmentation_Proportion(text, n):
+def Segmentation_Proportion(liste, n):
+  
+for i in range(len(liste))
+    text = liste[i]
     segmentation=list() #liste finale composée de n éléments comportants chacun plusieurs phrases
     sep=' ' # séparateur en chaque phrase (correspond à l'espace qu'il y a entre la fin d'une pharse et le début d'une autre)
     liste=numpy.array([0])*n #liste qui va nous indiquer le nombre de phrases qu'il y a doit y avoir par partie (liste[0] = nb phrases en première partie)
