@@ -15,6 +15,7 @@ import string
 def frequence_mot_dict(text): #cree la dictionnaire de mots et son fréquence
     text =text[0]
     text=text.replace("’",'  ') # replacer "’ " par l'espace
+    text = re.sub("[0-9]+",' ',text)
     for char in string.punctuation: # Replacer ponctuation dans le texte par l'espace
         text=text.replace(char,'  ')
     text=text.lower() # transformer les  mots à la minuscule
